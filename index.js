@@ -73,7 +73,7 @@ const set = async () => {
     } catch {
         console.log("error")
     }
-
+    document.querySelector("#loading").classList.add("d-none");
 }
 set()
 
@@ -102,3 +102,5 @@ const render = (data) => {
     })
 
 }
+
+
