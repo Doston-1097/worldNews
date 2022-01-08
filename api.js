@@ -3,4 +3,5 @@ const getNews= async (word)=>{
 }
 const getNews1= async ()=>{
     return await axios.get(`https://inshortsapi.vercel.app/news?category=all`)
+
 }

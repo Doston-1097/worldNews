@@ -13,4 +13,7 @@
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   box-shadow: none; }
 
+.hero p {
+  cursor: pointer; }
+
 /*# sourceMappingURL=index.css.map */
