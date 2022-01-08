@@ -22,7 +22,6 @@ list.addEventListener("click", async (e) => {
         word = e.target.textContent;
         try {
             const res = await getNews(word);
-            console.log(res.data)
             render(res.data)
         } catch {
             console.log("error")
