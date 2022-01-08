@@ -1,0 +1,17 @@
+
+.card-header{
+  max-height:250px;
+  max-width:500px;
+}
+.input{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 7px inset;
+  &:focus{
+    box-shadow: none
+  }
+}
+.btn-search{
+  border-radius:  0 6px 6px 0  ;
+}
+.btn-check:focus+.btn-primary, .btn-primary:focus{
+  box-shadow: none
+}
