@@ -1,5 +1,4 @@
 const form = document.querySelector("#newsForm")
-
 const list = document.querySelector("#list");
 
 
@@ -20,6 +19,7 @@ var word;
 list.addEventListener("click", async (e) => {
     if (e.target.tagName === 'P'){
         word = e.target.textContent;
+        document.querySelector("#loading").classList.remove("d-none");
         try {
             const res = await getNews(word);
             render(res.data)
@@ -33,6 +33,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     word = form.news.value.trim();
+    document.querySelector("#loading").classList.remove("d-none");
     if (word === "") return;
 
     try {
@@ -100,6 +101,7 @@ const render = (data) => {
         getElement("a", {className: "", innerHTML: "read more", href: data.readMoreUrl}, left)
 
     })
+    document.querySelector("#loading").classList.add("d-none");
 
 }
 
