@@ -57,12 +57,12 @@ const set = async () => {
             console.log(data)
             const IMG = getElement("img", {className: " w-100 h-100", src: data.imageUrl}, cardHeader)
             const cardBody = getElement("div", {className: "card-body"}, card)
-            const dateT = getElement("p", {className: " text-primary m-0", innerHTML: data.date}, cardBody)
-            const dateH = getElement("p", {className: " text-primary mt-0", innerHTML: data.time}, cardBody)
+            const dateT = getElement("p", {className: " text-secondary m-0", innerHTML: data.date}, cardBody)
+            const dateH = getElement("p", {className: " text-secondary mt-0", innerHTML: data.time}, cardBody)
             const auth = getElement("h6", {className: "", innerHTML: `Author: ${data.author}`}, cardBody)
             const title = getElement("p", {
                 className: "",
-                innerHTML: `<span class="fw-bold">about :</span> ${data.title}`
+                innerHTML: `<span class="fw-bold">About :</span> ${data.title}`
             }, cardBody)
             const Dflex = getElement("div", {className: "d-flex justify-content-between"}, cardBody)
             const left = getElement("div", {className: "",}, Dflex)
@@ -88,12 +88,12 @@ const render = (data) => {
         console.log(data)
         const IMG = getElement("img", {className: " w-100 h-100", src: data.imageUrl}, cardHeader)
         const cardBody = getElement("div", {className: "card-body"}, card)
-        const dateT = getElement("p", {className: " text-primary m-0", innerHTML: data.date}, cardBody)
-        const dateH = getElement("p", {className: " text-primary mt-0", innerHTML: data.time}, cardBody)
+        const dateT = getElement("p", {className: " text-secondary m-0", innerHTML: data.date}, cardBody)
+        const dateH = getElement("p", {className: " text-secondary mt-0", innerHTML: data.time}, cardBody)
         const auth = getElement("h6", {className: "", innerHTML: `Author: ${data.author}`}, cardBody)
         const title = getElement("p", {
             className: "",
-            innerHTML: `<span class="fw-bold">about :</span> ${data.title}`
+            innerHTML: `<span class="fw-bold">About :</span> ${data.title}`
         }, cardBody)
         const Dflex = getElement("div", {className: "d-flex justify-content-between"}, cardBody)
         const left = getElement("div", {className: "",}, Dflex)
