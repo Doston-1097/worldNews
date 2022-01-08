@@ -47,19 +47,18 @@ form.addEventListener('submit', async (e) => {
 })
 
 const newsPlace = document.querySelector("#newsPlace")
-getElement("h3", {className: " display-6", innerHTML: "all news",}, newsPlace)
+getElement("h3", {className: " display-6", innerHTML: "world news",}, newsPlace)
 const set = async () => {
     try {
         const res = await getNews1();
         res.data.data.map((data) => {
             const col = getElement("div", {className: "col-12  col-md-6 col-lg-4 my-3"}, newsPlace)
-            const card = getElement("div", {className: "card border-0 overflow-hidden shadow h-100"}, col);
+            const card = getElement("div", {className: "card d-flex border-0 overflow-hidden shadow h-100"}, col);
             const cardHeader = getElement("div", {className: "card-header p-0 w-100 h-100"}, card)
             console.log(data)
             const IMG = getElement("img", {className: " w-100 h-100", src: data.imageUrl}, cardHeader)
             const cardBody = getElement("div", {className: "card-body"}, card)
-            const dateT = getElement("p", {className: " text-secondary m-0", innerHTML: data.date}, cardBody)
-            const dateH = getElement("p", {className: " text-secondary mt-0", innerHTML: data.time}, cardBody)
+            const dateT = getElement("p", {className: " text-secondary ", innerHTML: data.date+" " + data.time}, cardBody)
             const auth = getElement("h6", {className: "", innerHTML: `Author: ${data.author}`}, cardBody)
             const title = getElement("p", {
                 className: "",

@@ -1,6 +1,9 @@
+.card {
+  display: flex !important; }
+
 .card-header {
-  max-height: 250px;
-  max-width: 500px; }
+  max-height: 200px;
+  max-width: 400px; }
 
 .input {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 7px inset; }
